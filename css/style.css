@@ -1,0 +1,362 @@
+
+/* COMMON RULES */
+header, footer, main, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
+	padding: 0;
+	margin: 0;
+	color: #2f1b15;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 22.43px;
+	font-weight: bold;
+}
+
+body 	{		background-color: #797979; }
+
+input 	{		outline: none;		}
+
+ul 		{ 		list-style: none;	}
+
+
+.wrapper {
+	background-image: url(../img/pattern.jpg);
+	display: block;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.underline {
+	display: block;
+	width: 100%;
+	height: 8px;
+	background-image: url(../img/underline.png);
+	background-repeat: repeat-x;
+}
+
+
+/* HEADER */
+header {	width: 100%;	}
+
+header>div, header>a {
+	background-repeat: no-repeat;
+	position: relative;
+	vertical-align: top;
+}
+
+.logo {
+	background-image: url(../img/logo.png);
+	width: 154px;
+	height: 60px;
+	margin: 65px 45px 20px 45px;
+	float: left;
+}
+
+.logo:after {
+	content: "Секретный архив учреждения";
+	font-family: 'PT Sans', sans-serif;
+	font-size: 10px;
+	display: inline-block;
+	bottom: 0;
+	left: 7px;
+	position: absolute;
+}
+
+.secretly {
+	background-image: url(../img/secretly.png);
+	width: 252px;
+	height: 106px;
+	margin: 47px 55px 40px 55px;
+	float: right;
+}
+
+
+/* MAIN CONTENT */
+main {
+	width: 770px;
+	display: block;
+	margin: 0 auto;
+}
+
+main>.title {
+	display: block;
+	margin: 0 auto;
+	background-image: url(../img/title.png);
+	width: 221px;
+	height: 118px;
+	margin-bottom: 55px;
+}
+
+	/* FORM */
+
+		/* TEXT INPUTS */
+		form, .input-wrapper {
+			width: 100%;
+			vertical-align: bottom;
+			margin-bottom: 15px;
+		}
+
+		.input-wrapper>label {
+			float: left;
+		}
+
+		.inputbox { 
+		    padding: 0 5px 0 0;
+		    overflow: hidden; 
+		    display: block;
+		}
+
+		.inputbox input { 
+			width: 100%; 
+			font-family: "Courier New";
+			font-size: 30px;
+			font-weight: normal;
+			padding: 0 15px;
+			background-color: rgba(0, 0, 0, 0.0);
+			border: none;
+			position: relative;
+			vertical-align: top;
+		}
+
+		.case .input-wrapper label {
+			font-weight: bold;
+			margin-right: 15px;
+			padding-top: 15px;
+		}
+
+
+		/* RULES for CUSTOM INPUTS */
+		.case input[type="checkbox"],
+		.case input[type="radio"] {
+		    display:none;     
+		    background: rgba(0, 0, 0, 0);       
+		}
+
+		.case .skills input[type="checkbox"] + label, 
+		.case .graduate-block input[type="radio"] + label {
+		  font: 18px bold;
+		  cursor: pointer;
+		  position: relative;
+		  margin-left: 40px;
+		  font-weight: bold;
+		  font-family: "PT Sans", sans-serif;
+		}
+
+		.case .skills input[type="checkbox"] + label:hover {
+			color: rgba(47, 27, 21, 0.7);
+		}
+
+		.case .skills input[type="checkbox"]:checked + label {
+			color: #0f375c;
+		}
+
+		.case .graduate-block input[type="radio"] + label:hover {
+			color: #000;
+		}
+
+		.case .skills input[type="checkbox"] + label {
+			font-size: 21px;
+			color: #000;
+		}
+
+		.case .graduate-block input[type="radio"] + label {
+			color: #2f1b15;
+			font-size: 22px;
+			margin-right: 15px;
+		}
+
+		.case .skills input[type="checkbox"] + label::before,
+		.case .graduate-block input[type="radio"] + label::before {
+		    content: "";
+		    display: inline-block;
+		    margin: 0 5px 0 0;
+		    background-image: url(../img/sprites.png);
+		    background-repeat: no-repeat;
+		    background-position: bottom left;
+		    position: absolute;
+		}
+
+		.case .graduate-block input[type="radio"] + label::before {
+			width: 35px;
+			height: 30px;
+			top: -3px;
+		    left: -42px;
+		}
+		.case .skills input[type="checkbox"] + label::before {
+			width: 24px;
+			height: 28px;
+			top: -5px;
+		    left: -30px;
+		}
+
+		.case .skills input[type="checkbox"] + label::before {
+		    background-position: -101px 0px ;    
+		}
+		.case .graduate-block input[type="radio"] + label::before {
+		    background-position: -1px 0;
+		}
+		.case .skills input[type="checkbox"]:checked + label::before {
+		    background-position: -151px 0px;
+		}
+		.case .graduate-block input[type="radio"]:checked + label::before {
+		    background-position: -50px 0;
+		}
+
+	/* GRADUATE BLOCK */
+	.graduate-block {
+		margin: 20px 0 35px 0;
+
+	}
+
+	.graduate-block .title {
+		margin-right: 20px;
+		line-height: 45px;
+	}
+
+	.graduate-block .title a {
+		color: #014f98;
+	}
+
+	.graduate-block .label {
+		line-height: 45px;
+	}
+
+	/* PRACTICAL SKILLS */
+	.skills {
+		width: 100%;
+	}
+
+	.skills>p {
+		font-size: 14px;
+		color: #3d3d3d;
+		font-weight: normal;
+		position: relative;
+		line-height: 24px;
+		margin-left: 15px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	.skills>p:before  {
+		content: '*';
+		position: absolute;
+		font-size: 36px;
+		top: 9px;
+		left: -18px;
+	}
+
+	.skills .column {
+		width: 33%;
+		display: block;
+		float: left;
+	}
+
+	.skills .column li {
+		width: 100%;
+		display: block;
+		margin-bottom: 5px;
+	}
+
+
+	/* JAVASCRIPT LEVEL */
+	.programming-skills {
+		margin-top: 80px;
+
+	}
+
+	.programming-skills .title {
+		margin-bottom: 25px;
+	}
+
+	.programming-skills .slider {
+		padding-top: 40px;
+		position: relative;
+	}
+
+	.programming-skills .slider:before {
+		position: absolute;
+		content: '';
+		top: 5px;
+		left: 0;
+		background-image: url(../img/underline.png);
+		background-repeat: repeat-x;
+		height: 9px;
+		width: 770px;
+		display: block;
+	}
+
+	.programming-skills .slider div {
+		font-size: 13px;
+		width: 200px;
+		margin-right: 24px;
+		color: #743;
+		vertical-align: top;
+		position: relative;
+	}
+
+	.programming-skills .slider div:first-child {
+		width: 110px;
+	}
+	
+	.programming-skills .slider div:last-child {
+		width: 170px;
+		margin-right: 0;
+		text-align: right;
+	}
+
+	.programming-skills .slider div:before {
+		position: absolute;
+		content: '';
+		top: -30px;
+		width: 3px;
+		height: 10px;
+		background-color: #5f4435;
+	}
+
+	.programming-skills .slider div:not(:last-child):before {
+		left: 0;
+	}
+
+	.programming-skills .slider div:first-child:before {
+		height: 25px;
+	}
+
+	.programming-skills .slider div:last-child:before {
+		height: 25px;
+		right: -1px;
+	}
+
+		.case .programming-skills input[type="radio"]:checked + label::before {
+		    content: "";
+		    display: inline-block;
+		    background-image: url(../img/slider-triangle.png);
+		    background-repeat: no-repeat;
+		    background-position: bottom left;
+		    position: absolute;
+			width: 17px;
+			height: 14px;
+			top: -48px;
+		}
+
+		.case .programming-skills input[type="radio"][id="dont-use"]:checked + label::before,
+		.case .programming-skills input[type="radio"][id="use-ready"]:checked + label::before,
+		.case .programming-skills input[type="radio"][id="change-ready"]:checked + label::before {
+		    left: -7px;
+		}
+
+		.case .programming-skills input[type="radio"][id="create-new"]:checked + label::before {
+		    right: -8px;
+		}
+
+		.case .programming-skills input[type="radio"] + label:hover {
+			color: #000;
+			cursor: pointer;
+		}
+
+	/* DATE BLOCK */
+
+	.completion-date {
+		margin-top: 50px;
+		margin-bottom: 75px;
+	}
